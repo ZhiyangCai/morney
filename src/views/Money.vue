@@ -9,6 +9,8 @@
   </Layout>
 </template>
 
+
+
 <script lang="ts">
 import Vue from "vue";
 import NumberPad from "@/components/Money/NumberPad.vue";
@@ -19,6 +21,7 @@ import Tabs from "@/components/Tabs.vue";
 import recordTypeList from "@/constants/recordTypeList";
 import store from "../store/index";
 import createId from "@/lib/createId";
+
 @Component({
   components: { Tabs, Tags, FormItem, NumberPad }
 })
@@ -41,11 +44,14 @@ export default class Money extends Vue {
   }
   saveRecord() {
     if (!this.record.tags || this.record.tags.length === 0) {
-      return window.alert("请至少选择一个标签");
+      return window.alert("请至少选择一个标签!");
     }
     this.$store.commit("createRecord", this.record);
     if (this.$store.state.createRecordError === null) {
-      window.alert("已保存");
+      if (this.record.amount === 0) {
+        return window.alert("请输入金额");
+      }
+      window.alert("已保存!");
       this.record.notes = "";
     }
   }

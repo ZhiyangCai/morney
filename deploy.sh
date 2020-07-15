@@ -14,7 +14,7 @@ cd dist
 
 git init
 git add -A
-git commit -m '用户必须手机观看二维码提示更新'
+git commit -m '金额提示更新'
 
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master

@@ -23,7 +23,7 @@ window.onload = function() {
   console.log(document.body.scrollHeight);
 };
 if (document.documentElement.clientWidth > 500) {
-  window.alert("请用手机打开本页面，以保证浏览效果");
+  window.alert("请用手机打开本页面，以保证浏览的效果");
   const img = document.createElement("img");
   img.src = "morneyCode.png";
   img.id = "morneyCode";
