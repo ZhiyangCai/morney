@@ -40,6 +40,7 @@ if (document.documentElement.clientWidth > 500) {
         if ((event.target as HTMLUListElement).id !== "morneyCode") {
           img.remove();
         }
+
       }
     },
     true
